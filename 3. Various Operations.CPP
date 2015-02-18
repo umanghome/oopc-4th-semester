@@ -33,7 +33,7 @@ int main()
 			break;
 
 		case 4:
-			div = ((float) a + (float) b) / 2;
+			div = ((float) a / (float) b);
 			cout << "The division is: " << div;
 			break;
 
