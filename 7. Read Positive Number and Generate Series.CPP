@@ -6,8 +6,11 @@ void main()
 	int n, i;
 	clrscr();
 
-	cout << "Enter n: ";
-	cin >> n;
+	do {
+		cout << "Enter n: ";
+		cin >> n;
+	} while (n % 2 != 0);
+	
 
 	for (i = n; i >= 0; i--)
 		cout << i << " ";

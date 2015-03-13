@@ -3,7 +3,7 @@
 
 void main()
 {
-	int number, key, i, copy, length = 0, rev = 0;
+	int number, key, i, copy, length = 0, rev = 0, found = 0;
 	clrscr();
 
 	cout << "Enter the number: ";
@@ -18,21 +18,24 @@ void main()
 		rev = (rev * 10) + (number % 10);
 		number /= 10;
 		length++;
-	}
-	cout << rev << "\n";
+	}	
 	number = copy;
 	i = 0;
 	while (i < length)
 	{
 		if (rev % 10 == key)
 		{
+			found = 1;
 			break;
 		}
 		rev /= 10;
 		i++;
 	}
 
-	cout << "Found " << key << " at position " << i + 1;
+	if (found == 1)
+		cout << "Found " << key << " at position " << i + 1;
+	else
+		cout << "Could not find " << key << "!";
 
 	getch();
 }
